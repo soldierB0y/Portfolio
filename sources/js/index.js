@@ -57,6 +57,8 @@ card2.addEventListener('mouseleave',()=>{
 const homeButton= document.getElementById('homeButton');
 homeButton.style.opacity=0;
 var screenHeight= window.screen.height;
+//efecto nav
+const nav= document.getElementById('nav');
 
 var screenTop;
 
@@ -66,10 +68,13 @@ document.addEventListener('wheel',()=>{
     if(screenTop <= screenHeight)
     {
         homeButton.style.opacity=0;
+        nav.classList.remove('navFixed');
+
     }
     else
     {
         homeButton.style.opacity=1;
+        nav.classList.add('navFixed');
     }
 })
 
@@ -90,8 +95,26 @@ cards.forEach(card => {
                 card.classList.remove('styleFlipLikeCard')
             }, 5000);
         }
-
     });
 
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = document.querySelector(".container div p");
+    text.addEventListener("animationend", function (event) {
+        if (event.animationName === "typing1") {
+            text.classList.add("finished"); // Removes the cursor effect
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = document.querySelector(".container div p");
+    text.addEventListener("animationend", function (event) {
+        if (event.animationName === "typing2") {
+            text.classList.add("finished"); // Removes the cursor effect
+        }
+    });
+});

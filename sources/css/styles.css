@@ -38,10 +38,10 @@ nav
     width: 55%;
     height: 150px;
     background-color: rgba(255, 255, 255,0.08);
-    position: absolute;
+    position: relative;
     align-self: center;
     padding: 0px 50px;
-    top:-120px;
+    top:-160px;
     border-radius: 30px;
     transition: .1s ease-in-out;
     font-size: 25px;
@@ -78,6 +78,23 @@ nav::before{
     }
 }
 
+.navFixed
+{
+    position: fixed;
+    top:10px;
+    height: 100px;
+    z-index:10000;
+    border: 1px #1db954 solid;
+}
+.navFixed ul li a
+{
+    color: white;
+}
+
+.navFixed:hover
+{
+    top: 10px !important;
+}
 
 .arrowDown
 {
@@ -122,7 +139,7 @@ nav ul li
 
 nav:hover
 {
-    top:-30px
+    top:-80px
 }
 
 
@@ -141,6 +158,19 @@ nav:hover
 }
 
 
+.info p
+{
+    font-size: 21px;
+    width: 50%;
+
+}
+
+.flexRow
+{
+    flex-direction: row;
+    text-align: justify;
+}
+
 
 .container
 {
@@ -153,7 +183,7 @@ nav:hover
     padding: 10%;
     overflow: hidden;
     position:relative;
-    padding-top: 15%;
+    align-items: flex-start;
 }
 
 
@@ -177,7 +207,7 @@ nav:hover
 }
 .container h1
 {
-    font-size: 80px;
+    font-size: 60px;
 
 }
 
@@ -526,6 +556,86 @@ footer a img:hover
     
 }
 
+
+.container div span:hover
+{
+    position: relative;
+    top:-10px;
+}
+
+.primaryText
+{
+    display: inline-block;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+    white-space:nowrap;
+    overflow: hidden;
+
+    width: 0;
+    animation:
+        typing1 2s steps(56) forwards,
+        cursor1 .3s step-end 10 alternate;
+    
+
+}
+
+.secondText
+{
+    display: inline-block;
+    font-size: 32px;
+    margin-top: 0;
+    letter-spacing: 5px;
+    border-right: 5px transparent solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: 
+        typing2 3s steps(56) forwards,
+        cursor2 .3s step-end infinite alternate;
+
+        animation-delay: 2s;
+
+}
+
+.finished
+{
+    border-color: transparent !important;
+}
+
+@keyframes cursor1 {
+    0%{
+        border-color: white;
+    }
+    50%{
+        border-color: transparent
+    }
+
+
+}
+@keyframes cursor2 {
+    0%{
+        border-color: white;
+    }
+    50%{
+        border-color: transparent
+    }
+
+
+}
+
+@keyframes typing1 {
+    0%{width: 0}
+    100%{
+        width: 32ch;
+    }
+}
+@keyframes typing2 {
+    0%{width: 0}
+    100%{
+        width: 40ch;
+    }
+}
+
 @keyframes card {
     0%{
         top:100%;
@@ -542,6 +652,41 @@ footer a img:hover
 
 @media screen and (max-width: 1300px)
 {
+
+
+    @keyframes cursor1 {
+        0%{
+            border-color: white;
+        }
+        50%{
+            border-color: transparent
+        }
+    
+    
+    }
+    @keyframes cursor2 {
+        0%{
+            border-color: white;
+        }
+        50%{
+            border-color: transparent
+        }
+    
+    
+    }
+    
+    @keyframes typing1 {
+        0%{width: 0}
+        100%{
+            width: 32ch;
+        }
+    }
+    @keyframes typing2 {
+        0%{width: 0}
+        100%{
+            width: 58ch;
+        }
+    }
     footer{
         gap:5px;
     }
@@ -555,13 +700,14 @@ footer a img:hover
     }
     .cardInfo
     {
-        width: 90%;
+        width: 100%;
         height: 200px;
     }
 
     .homeButton
     {
-        left: 60%;
+        top:80%;
+        left: 80%;
     }
 
     .container h1,p
@@ -595,7 +741,7 @@ footer a img:hover
     }
     .container div p
     {
-        font-size: 18px;
+        font-size: 11px;
     }
    .container img
    {
@@ -604,10 +750,14 @@ footer a img:hover
    nav
    {
     max-width:500px;
+    top:10px;
+    height: 100px;
+    z-index:10000;
+
    }
    body h2
    {
-    padding: 50px 0;
+    padding: 25px 0;
     padding-left:0;
     font-size: 24px;
    }
@@ -621,6 +771,11 @@ footer a img:hover
    {
     width: 30px;
     height: 30px;
+   }
+
+   .tittleDiv
+   {
+    margin-top: 0;;
    }
 
    .info
@@ -654,4 +809,54 @@ footer a img:hover
         
     }
 
+    nav
+    {
+        font-size: 12px;
+        width: 80%;
+        height: 35px !important;
+
+    }
+    
+    nav ul
+    {
+        gap:10px;
+        height: auto;
+        justify-self: center;
+    }
+
+    .arrowDown
+    {
+        display: none;
+    }
+
+    .info
+    {
+        padding: 30px;
+    
+    }
+
+    .info p
+    {
+        width: 100%;
+        font-size: 11px;
+        text-align: left;
+    }
+
+    body h2
+    {
+        
+    }
+
+    .wallpaper
+    {
+        scale: 3;
+    }
+
+    footer
+    {
+        padding: 30px;
+        position: inherit;
+        width: 90%;
+
+    }
 }
