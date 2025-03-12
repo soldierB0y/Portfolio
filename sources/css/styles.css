@@ -21,6 +21,11 @@ body
 
 }
 
+
+
+
+
+
 body h2
 {
     padding:20px 0px;
@@ -43,12 +48,15 @@ nav
     padding: 0px 50px;
     top:-160px;
     border-radius: 30px;
-    transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
     font-size: 25px;
     backdrop-filter: blur(10px);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
+
+
+
 
 nav::before{
     content: '';
@@ -142,6 +150,10 @@ nav:hover
     top:-80px
 }
 
+.info input
+{
+    display: none;
+}
 
 .info
 {
@@ -156,13 +168,27 @@ nav:hover
     padding: 0 5%;
     flex-wrap: nowrap;
     justify-content: space-around;
-    gap:20px
+    gap:20px;
+    transition: .1s ease;
+    position: relative;
+    top:100px;
+    opacity: 0;
+    scale: .8;
+}
+
+.floatUp
+{
+    position: relative;
+    top:0;
+    opacity: 1;
+    scale: 1;
+    transition: .8s ease-in-out;
 }
 
 
 .info p
 {
-    font-size: 21px;
+    font-size: 17px;
     width: 50%;
 
 }
@@ -176,7 +202,7 @@ nav:hover
 
 .container
 {
-
+    
     width: 100%;
     height: 90vh;
     display:flex;
@@ -302,6 +328,12 @@ nav:hover
     border-radius: 40px;
     object-fit: cover;
     object-position: center;
+    flex:1;
+}
+
+.info p
+{
+    flex:1;
 }
 
 .card
@@ -602,7 +634,7 @@ footer a img:hover
     display: inline-block;
     font-size: 32px;
     margin-top: 0;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     border-right: 5px transparent solid;
     white-space: nowrap;
     overflow: hidden;
@@ -668,6 +700,12 @@ footer a img:hover
 }
 
 
+
+
+
+
+
+
 @media screen and (max-width: 1300px)
 {
 
@@ -707,7 +745,7 @@ footer a img:hover
     @keyframes typing2 {
         0%{width: 0}
         100%{
-            width: 58ch;
+            width: 50ch;
         }
     }
     footer{
@@ -720,11 +758,19 @@ footer a img:hover
     .card
     {
         min-height: 150px;
+        width: 100%;
     }
     .cardInfo
     {
-        width: 100%;
-        height: 200px;
+        width: 80%;
+        height: auto;
+    }
+
+    .info a
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .homeButton
@@ -757,7 +803,15 @@ footer a img:hover
     {
         max-height: 70vh;
         align-items:center;
+        text-align: left;
+        padding: 20px;
     }
+
+    .container div
+    {
+        width: 100%;
+    }
+
     .container div h1
     {
         font-size: 30px;
@@ -863,7 +917,22 @@ footer a img:hover
         width: 100%;
         font-size: 11px;
         text-align: left;
+        max-height: 85px;
+        overflow-y: hidden;
     }
+
+    .info input
+    {
+        display: block;
+        background-color: #1db954;
+        border-style: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: white;
+    }
+
+
+
 
     body h2
     {
@@ -878,8 +947,16 @@ footer a img:hover
     footer
     {
         padding: 30px;
-        position: inherit;
+        position: relative;
         width: 90%;
+    }
 
+
+    .heighAuto
+    {
+        width: 100%;
+        height: fit-content;
+        max-height: fit-content !important;
+        overflow-y: visible !important;
     }
 }

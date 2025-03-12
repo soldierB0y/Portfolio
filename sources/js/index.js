@@ -118,3 +118,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+function isElementInViewport(el, scrTop) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight;  // Element's top is within the viewport height
+}
+
+window.addEventListener('scroll', function() {
+    animateContainer();
+});
+
+
+function animateContainer()
+  {
+    const allContainers = document.querySelectorAll('.info');
+    const screenTop= this.screenTop;
+    allContainers.forEach(element => {
+      if (isElementInViewport(element,screenTop)) {
+        element.classList.add('floatUp')
+      }
+    });
+  }
+
+  
+
+const boton= document.getElementById('botonMostrar');
+const myDescrip= document.getElementById('myDescription');
+boton.addEventListener('click',(e)=>{
+    myDescrip.classList.toggle('heighAuto');
+    const valor= e.target.value;
+    if(valor=='Mostrar Mas')
+        e.target.value= 'Mostrar Menos'
+    else
+        e.target.value= 'Mostrar Mas'
+})
