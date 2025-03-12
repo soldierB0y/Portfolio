@@ -146,6 +146,7 @@ nav:hover
 .info
 {
     width: 80%;
+    max-width: 1500px;
     min-height: 70vh;
     align-self: center;
     background-color: #212121 ;
@@ -155,6 +156,7 @@ nav:hover
     padding: 0 5%;
     flex-wrap: nowrap;
     justify-content: space-around;
+    gap:20px
 }
 
 
@@ -179,12 +181,18 @@ nav:hover
     height: 90vh;
     display:flex;
     flex-direction: row;
-    max-width: 100%;
-    padding: 10%;
+    max-width: 1500px;
+    align-self: center;
     overflow: hidden;
     position:relative;
     align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding:100px;
+    padding-top: 0;
 }
+
+
 
 
 
@@ -198,6 +206,8 @@ nav:hover
     flex:1;
     height: 100%;
     object-fit:cover;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 .container h1,p
@@ -285,6 +295,14 @@ nav:hover
     filter:invert(0.7)
 }
 
+
+.gif
+{
+    width: 40%;
+    border-radius: 40px;
+    object-fit: cover;
+    object-position: center;
+}
 
 .card
 {
@@ -653,6 +671,10 @@ footer a img:hover
 @media screen and (max-width: 1300px)
 {
 
+    .gif
+    {
+        width: 100%;
+    }
 
     @keyframes cursor1 {
         0%{
