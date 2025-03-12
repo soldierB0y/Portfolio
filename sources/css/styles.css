@@ -674,6 +674,7 @@ footer a img:hover
     .gif
     {
         width: 100%;
+        align-self: center;
     }
 
     @keyframes cursor1 {
