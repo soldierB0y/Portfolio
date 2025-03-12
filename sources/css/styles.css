@@ -168,12 +168,20 @@ nav:hover
     padding: 0 5%;
     flex-wrap: nowrap;
     justify-content: space-around;
-    gap:20px;
+    gap:25px;
     transition: .1s ease;
     position: relative;
     top:100px;
     opacity: 0;
     scale: .8;
+}
+
+
+
+.certificationPic
+{
+    width: 200px;
+    border-radius: 20px;
 }
 
 .floatUp
@@ -188,7 +196,7 @@ nav:hover
 
 .info p
 {
-    font-size: 17px;
+    font-size: 20px;
     width: 50%;
 
 }
