@@ -78,6 +78,21 @@ document.addEventListener('wheel',()=>{
     }
 })
 
+document.addEventListener('touchmove',()=>{
+    screenTop=$(document).scrollTop();
+    if(screenTop <= screenHeight)
+    {
+        homeButton.style.opacity=0;
+        nav.classList.remove('navFixed');
+
+    }
+    else
+    {
+        homeButton.style.opacity=1;
+        nav.classList.add('navFixed');
+    }
+})
+
 
 //card
 
